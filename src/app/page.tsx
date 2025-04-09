@@ -1,8 +1,11 @@
 'use client';
 
+import { generateGoogleAuthUrl } from "./google/googleAuthUrl";
+
 export default function Home() {
   const handleLogin = () => {
-    window.location.href = 'http://localhost:3000/auth/google';
+    const googleUrl = generateGoogleAuthUrl();
+    window.location.href = googleUrl;
   };
 
   return (
